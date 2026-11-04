@@ -5,6 +5,9 @@ def addition(a, b):
 def subtraction(a, b):
     return a - b
 
+def multiplication(a, b):
+    return a * b
+
 
 def main():
     while True:
@@ -22,25 +25,32 @@ def main():
         match choice:
             case "1":
                 try:
-                    luku1 = float(input("Enter first number: "))
-                    luku2 = float(input("Enter second number: "))
+                    number1 = float(input("Enter first number: "))
+                    number2 = float(input("Enter second number: "))
 
-                    result = addition(luku1, luku2)
+                    result = addition(number1, number2)
                     print(f"Result: {result}")
                 except ValueError:
                     print("Invalid input! Please enter numbers only.")
             case "2":
                 try:
-                    a = float(input("Enter first number: "))
-                    b = float(input("Enter second number: "))
+                    number1 = float(input("Enter first number: "))
+                    number2 = float(input("Enter second number: "))
 
-                    result = subtraction(a, b)
+                    result = subtraction(number1, number2)
                     print(f"Result: {result}")
 
                 except ValueError:
                     print("Invalid input! Please enter numbers only.")
             case "3":
-                print("Multiplication not implemented yet")
+                try:
+                    number1 = float(input("Enter first number: "))
+                    number2 = float(input("Enter second number: "))
+
+                    result = multiplication(number1, number2)
+                    print(f"Result: {result}")
+                except ValueError:
+                    print("Invalid input! Please enter numbers only.")
             case "4":
                 print("Division not implemented yet")
             case "5":
