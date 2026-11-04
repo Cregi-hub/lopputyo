@@ -1,3 +1,7 @@
+def addition(a, b):
+    return a + b
+
+
 def main():
     while True:
         print("===== CALCULATOR =====")
@@ -13,7 +17,14 @@ def main():
 
         match choice:
             case "1":
-                print("Addition not implemented yet")
+                try:
+                    luku1 = float(input("Enter first number: "))
+                    luku2 = float(input("Enter second number: "))
+
+                    result = addition(luku1, luku2)
+                    print(f"Result: {result}")
+                except ValueError:
+                    print("Invalid input! Please enter numbers only.")
             case "2":
                 print("Subtraction not implemented yet")
             case "3":
