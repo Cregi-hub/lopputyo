@@ -5,8 +5,13 @@ def addition(a, b):
 def subtraction(a, b):
     return a - b
 
+
 def multiplication(a, b):
     return a * b
+
+
+def division(a, b):
+    return a / b
 
 
 def main():
@@ -52,7 +57,17 @@ def main():
                 except ValueError:
                     print("Invalid input! Please enter numbers only.")
             case "4":
-                print("Division not implemented yet")
+                try:
+                    number1 = float(input("Enter first number: "))
+                    number2 = float(input("Enter second number: "))
+
+                    result = division(number1, number2)
+                    print(f"Result: {result}")
+
+                except ValueError:
+                    print("Invalid input! Please enter numbers only.")
+                except ZeroDivisionError:
+                    print("Error: Cannot divide by zero!")
             case "5":
                 print("Goodbye!")
                 break
