@@ -2,6 +2,10 @@ def addition(a, b):
     return a + b
 
 
+def subtraction(a, b):
+    return a - b
+
+
 def main():
     while True:
         print("===== CALCULATOR =====")
@@ -26,7 +30,15 @@ def main():
                 except ValueError:
                     print("Invalid input! Please enter numbers only.")
             case "2":
-                print("Subtraction not implemented yet")
+                try:
+                    a = float(input("Enter first number: "))
+                    b = float(input("Enter second number: "))
+
+                    result = subtraction(a, b)
+                    print(f"Result: {result}")
+
+                except ValueError:
+                    print("Invalid input! Please enter numbers only.")
             case "3":
                 print("Multiplication not implemented yet")
             case "4":
